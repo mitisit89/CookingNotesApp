@@ -5,26 +5,26 @@
     <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
     <title>
         {% block Title %}
-        title
+
         {%endblock%}
     </title>
 </head>
 <body>
 <header>
     <nav>
-        <div class="nav-list">
+        <div class="nav-menu">
             <ul class="nav-list">
-                <li class="nav-item" href="#">link 1</li>
-                <li class="nav-item" href="#">link 2</li>
-                <li class="nav-item" href="#">link 3</li>
-                <li class="nav-item" href="#">link 4</li>
+                <li class="nav-item"><a href="{{url_for('index')}}" class="nav-link">Главная</a></li>
+                <li class="nav-item"><a href="#" class="nav-link"> Личный кабинет</a></li>
+                <li class="nav-item"><a href="{{url_for('login')}}" class="nav-link">Войти</a></li>
+                <li class="nav-item"><a href="{{url_for('register')}}" class="nav-link">регистрация</a></li>
             </ul>
         </div>
     </nav>
 </header>
 <div class="container">
     {%block Content%}
-    <h1>Hello world!</h1>
+
     {% endblock %}
 </div>
 <footer>
