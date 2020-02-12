@@ -1,7 +1,4 @@
-from view import *
-from socket import gethostname
+from app.app import *
 
 if __name__ == '__main__':
-    db.create_all()
-    if 'liveconsole' not in gethostname():
-        app.run()
+    app.run()

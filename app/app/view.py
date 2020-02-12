@@ -1,7 +1,6 @@
 from flask import render_template, redirect, url_for
-from app import app, db
-from form import LoginForm, RegistrationForm, Users
-from flask_login import current_user
+from .__init__ import app, db
+from .form import LoginForm, RegistrationForm, Users
 
 
 @app.route('/')

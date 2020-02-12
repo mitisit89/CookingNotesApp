@@ -1,5 +1,5 @@
 from flask import Flask
-from config import Configuration
+from .config import Configuration
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
@@ -8,4 +8,5 @@ app.config.from_object(Configuration)
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
-from models import Users
+from .view import *
+from .models import Users, Posts
