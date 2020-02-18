@@ -1,9 +1,10 @@
 from flask import render_template, redirect, url_for
 from .__init__ import app, db
-from .form import LoginForm, RegistrationForm, Users
-
+from app.form import LoginForm, RegistrationForm, Users
+from flask_security import login_required
 
 @app.route('/')
+@login_required
 def index():
     return render_template('index.html')
 
