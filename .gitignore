@@ -3,3 +3,13 @@
 Будет удалено migrations/__pycache__/
 Будет удалено migrations/versions/__pycache__/
 
+Будет удалено .idea/.gitignore
+Будет удалено .idea/CookingNotesApp.iml
+Будет удалено .idea/inspectionProfiles/
+Будет удалено .idea/misc.xml
+Будет удалено .idea/modules.xml
+Будет удалено .idea/vcs.xml
+Будет удалено __pycache__/
+Будет удалено app.db
+Будет удалено app/__pycache__/
+Будет удалено app/admin/__pycache__/
