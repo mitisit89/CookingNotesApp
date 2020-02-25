@@ -1,8 +1,9 @@
-from app import app, veiw
+from app import (app, veiw)
 from admin import admin
 from post import post
 from authorization import authorization
 
+# blueprints
 app.register_blueprint(admin, url_prefix='/admin')
 app.register_blueprint(authorization, url_perfix='/authorization')
 app.register_blueprint(post, url_prefix='/post')

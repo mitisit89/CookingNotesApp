@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap&subset=cyrillic-ext') html {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    background-color: inherit;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style-type: none;
+}
+
+.nav-list, .auth-list {
+    display: inline-flex;
+}
+
+.nav-link {
+    flex-flow: row wrap;
+    padding: inherit;
+}
+
+
+.navigation {
+    display: flex;
+    flex-flow: row;
+    background-color: #c3fff4;
+}
+
+.auth {
+    display: flex;
+}
