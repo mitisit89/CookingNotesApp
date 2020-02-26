@@ -1,7 +1,7 @@
 from flask import Blueprint, url_for, redirect, flash, render_template
 from flask_login import current_user, login_user, logout_user
 from app.models import Users, db
-from .forms import LoginForm, RegistrationForm
+from forms import LoginForm, RegistrationForm
 
 authorization = Blueprint('authorization', __name__, template_folder='templates')
 
