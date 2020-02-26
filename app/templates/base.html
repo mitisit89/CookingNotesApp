@@ -36,15 +36,21 @@
         </ul>
         <div class="auth">
             <ul class="auth-list">
+                {%if current_user.is_anonymous: %}
                 <li class="nav-link">
                     <a href="{{url_for('authorization.login')}}">Вход</a>
                 </li>
                 <li class="nav-link">
                     <a href="{{url_for('authorization.register')}}">Регистрация</a>
                 </li>
+                {%else%}
+                <li class="nav-link">
+                    <a href="{{url_for('post.create')}}">Создать запись</a>
+                </li>
                 <li class="nav-link">
                     <a href="{{url_for('authorization.logout')}}">Выход</a>
                 </li>
+                {%endif%}
             </ul>
         </div>
     </nav>
