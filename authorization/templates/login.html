@@ -3,7 +3,8 @@
 loign
 {%endblock%}
 {% block content %}
-<form action="" method="post">
+<h1>Sign In</h1>
+<form class="auth" action="" method="post">
     {{ form.hidden_tag() }}
     <p>
         {{ form.username.label }}<br>
@@ -19,6 +20,7 @@ loign
         <span style="color: red;">[{{ error }}]</span>
         {% endfor %}
     </p>
+    <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
     <p>{{ form.submit() }}</p>
 </form>
 {% endblock %}
