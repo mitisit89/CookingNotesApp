@@ -3,13 +3,13 @@ from flask_login import login_required, current_user
 from forms import CreatePostForm
 from app.models import Posts, db
 import re
-
+from time import time
 post = Blueprint('post', __name__, template_folder='templates')
 
 
-def slugyfy(s):
+def slugify(s):
     pattern = r'[^\w+]'
-    return re.sub(pattern, '-', s).lower()
+    return re.sub(pattern, '-', s).lower() + '-' + str(int(time()))
 
 
 @post.route('/<slug>')
@@ -23,7 +23,7 @@ def index(slug):
 def create():
     form = CreatePostForm()
     if form.validate_on_submit():
-        new_post = Posts(title=form.title.data, body=form.body.data, slug=slugyfy(form.title.data), author=current_user)
+        new_post = Posts(title=form.title.data, body=form.body.data, slug=slugify(form.title.data), author=current_user)
         db.session.add(new_post)
         db.session.commit()
         return redirect(url_for('index'))
