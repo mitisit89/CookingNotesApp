@@ -1,9 +1,12 @@
 {%extends 'base.html'%}
 
 {%block title%}
-Пост
+{{post.title}}
 {%endblock%}
 {%block content%}
-
-<h1>Post</h1>
+<div class="pos">
+    <h1>{{post.title}}</h1>
+    <p>{{post.body}}</p>
+    <span class="author">{{post.author.username}}</span>
+</div>
 {%endblock%}

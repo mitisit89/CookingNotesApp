@@ -2,6 +2,7 @@ from app import db, login_manager
 from datetime import datetime
 from flask_login import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
+import re
 
 
 class Users(UserMixin, db.Model):
@@ -33,3 +34,4 @@ class Posts(db.Model):
     body = db.Column(db.Text)
     time_stamp = db.Column(db.DateTime, index=True, default=datetime.utcnow())
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+

@@ -1,7 +1,9 @@
 from flask import render_template
 from app import app
+from app.models import Posts
 
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    posts = Posts.query.all()
+    return render_template('index.html', posts=posts)
