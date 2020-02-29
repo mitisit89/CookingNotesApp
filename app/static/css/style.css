@@ -3,14 +3,14 @@
 }
 
 body {
-    background-color: inherit;
+    background-color: #f1f5ff;
     margin: 0;
 }
 
 a {
     text-decoration: none;
-    color: black;
-}
+      color:white;
+ }
 
 li {
     list-style-type: none;
@@ -29,9 +29,50 @@ li {
 .navigation {
     display: flex;
     flex-flow: row;
-    background-color: #c3fff4;
+    background-color: #3d3d3f;
+    color:white;
+    padding:10px;
+    margin:10px;
+    position:relative;
+
+
 }
+.nav-menu{
+display:flex;
+align-content: inherit;
+ align-item:center
+}
+
 
 .auth {
     display: flex;
+    align-content: space-between;
+    align-self: flex-end;
+
 }
+.nav-links{
+    display:flex
+    align-content: space-between;
+}
+.container{
+    display:flex;
+
+}
+.row{
+   display: flex;
+   flex: 1;
+  justify-content: space-around;
+  position:relative;
+flex-direction: column;
+padding:10px;
+margin:10px;
+background-color:#8fabf2;
+}
+.post-title{
+
+}
+.post_url{
+display:flex;
+align-items: center;
+}
+
