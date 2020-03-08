@@ -30,7 +30,7 @@ class RegistrationForm(FlaskForm):
             raise ValidationError('Please use a different email address.')
 
 
-class CreatePostForm(FlaskForm):
+class PostForm(FlaskForm):
     title = StringField('Название рецепта ')
     body = TextAreaField('Рецепт ', validators=[DataRequired()])
     submit = SubmitField('Submit')
