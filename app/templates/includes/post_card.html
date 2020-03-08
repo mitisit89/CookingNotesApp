@@ -1,3 +1,3 @@
 <h1 class="post_title">{{post.title}}</h1>
 <p class="post_body">{{post.body|capitalize|truncate(9, True)}}</p>
-<a class="post_url" href="{{url_for('post.index',slug=post.slug)}}">Подробнее</a>
+<a href="{{url_for('post.index',slug=post.slug)}}">Подробнее</a>
