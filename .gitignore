@@ -10,6 +10,6 @@
 Будет удалено .idea/modules.xml
 Будет удалено .idea/vcs.xml
 Будет удалено __pycache__/
-Будет удалено app.db
+
 Будет удалено app/__pycache__/
 Будет удалено app/admin/__pycache__/
