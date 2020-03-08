@@ -5,9 +5,9 @@
 {%endblock%}
 
 {%block content%}
-<h1>Создать запись</h1>
+<h1>Редактировать запись</h1>
 
-<form class="auth" action="{{url_for('post.create')}}" method="post">
+<form class="auth" action="{{url_for('post.edit',slug=post.slug)}}" method="POST">
     {{ form.csrf_token }}
     <p>
         {{ form.title.label }}<br>
