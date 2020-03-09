@@ -7,3 +7,7 @@ from app.models import Posts
 def index():
     posts = Posts.query.all()
     return render_template('index.html', posts=posts)
+
+
+def search():
+    pass

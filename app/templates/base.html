@@ -31,24 +31,28 @@
                     <a href="#">Lorem4</a>
                 </li>
 
-                {%if current_user.is_anonymous: %}
+                {%if current_user.is_authenticated: %}
                 <li class="nav-link">
-                    <a href="{{url_for('authorization.login')}}">Вход</a>
+                    <a href="{{url_for('admin.index')}}">Admin</a>
                 </li>
-                <li class="nav-link">
-                    <a href="{{url_for('authorization.register')}}">Регистрация</a>
-                </li>
-                {%else%}
+
                 <li class="nav-link">
                     <a href="{{url_for('post.create')}}">Создать запись</a>
                 </li>
                 <li class="nav-link">
                     <a href="{{url_for('authorization.logout')}}">Выход</a>
                 </li>
+                {%else%}
+                <li class="nav-link">
+                    <a href="{{url_for('authorization.login')}}">Вход</a>
+                </li>
+                <li class="nav-link">
+                    <a href="{{url_for('authorization.register')}}">Регистрация</a>
+                </li>
                 {%endif%}
             </ul>
             <form class="search" action="">
-                <input type="text">
+                <input type="text" placeholder="найти" name="q">
 
                 <button type="submit">
                     search

@@ -1,11 +1,7 @@
 {% extends 'base.html'%}
 
 {%block title%}
-{%if 'create' in request.path  %}
-Создать запись
-{%elif 'edit' in request.path%}
-Редактировать запись
-{%endif%}
+{{title}}
 {%endblock%}
 
 {%block content%}
