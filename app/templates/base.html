@@ -51,8 +51,8 @@
                 </li>
                 {%endif%}
             </ul>
-            <form class="search" action="">
-                <input type="text" placeholder="найти" name="q">
+            <form class="search" action="" method="GET">
+                <input type="text" placeholder="найти" name="q" value="{{request.args.get('q','')}}">
 
                 <button type="submit">
                     search
