@@ -1,0 +1,43 @@
+{% extends 'base.html'%}
+
+{%block title%}
+{%if 'create' in request.path  %}
+Создать запись
+{%elif 'edit' in request.path%}
+Редактировать запись
+{%endif%}
+{%endblock%}
+
+{%block content%}
+{%if 'create' in request.path  %}
+<h1>Создать запись</h1>
+<form class="form" action="{{url_for('post.create')}}" method="post">
+    {{ form.csrf_token }}
+    <p>
+        {{ form.title.label }}<br>
+        {{ form.title(size=32) }}<br>
+    </p>
+    <p>
+        {{ form.body.label }}<br>
+        {{ form.body}}<br>
+    </p>
+    <p>{{ form.submit() }}</p>
+</form>
+{%elif 'edit' in request.path%}
+<h1>Редактировать запись</h1>
+
+<form class="form" action="{{url_for('post.edit',slug=post.slug)}}" method="POST">
+    {{ form.csrf_token }}
+    <p>
+        {{ form.title.label }}<br>
+        {{ form.title(size=32) }}<br>
+    </p>
+    <p>
+        {{ form.body.label }}<br>
+        {{ form.body}}<br>
+    </p>
+    <p>{{ form.submit() }}</p>
+</form>
+{%endif%}
+
+{%endblock%}

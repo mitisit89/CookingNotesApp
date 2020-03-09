@@ -28,7 +28,7 @@ def create():
         db.session.add(new_post)
         db.session.commit()
         return redirect(url_for('index'))
-    return render_template('create_post.html', form=form)
+    return render_template('create_post_and_edit.html', form=form)
 
 
 @login_required
@@ -42,4 +42,4 @@ def edit(slug):
         return redirect(url_for('post.index', slug=post_for_edit.slug))
     else:
         form = PostForm(obj=post_for_edit)
-        return render_template('edit_post.html', form=form, post=post_for_edit)
+        return render_template('create_post_and_edit.html', form=form, post=post_for_edit)
